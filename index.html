@@ -1,15 +1,15 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#1b1f4b"><title>VedicPrep – Mental maths for Bank, SSC & State exams</title>
+<meta name="theme-color" content="#1b1f4b"><link rel="manifest" href="/manifest.webmanifest"><link rel="apple-touch-icon" href="/icon-192.png"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><title>VedicPrep – Mental maths for Bank, SSC & State exams</title>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#1b1f4b;--paper:#f6f5fb;--card:#fff;--saf:#ff9f1c;--mint:#1f9e8f;--red:#d63a45;--mut:#6b6f8f;--line:#e2e1ee;box-sizing:border-box}
-*{box-sizing:inherit}html,body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 Sora,system-ui,sans-serif}
+:root{--tx:#1b1f4b;--ink:#1b1f4b;--paper:#f6f5fb;--card:#fff;--saf:#ff9f1c;--mint:#1f9e8f;--red:#d63a45;--mut:#6b6f8f;--line:#e2e1ee;box-sizing:border-box}
+*{box-sizing:inherit}html,body{margin:0;background:var(--paper);color:var(--tx);font:16px/1.5 Sora,system-ui,sans-serif}
 body{padding:env(safe-area-inset-top) 0 calc(76px + env(safe-area-inset-bottom))}
 #app{max-width:760px;margin:0 auto;padding:16px}
 h1{font-size:1.5rem;margin:.2rem 0 .1rem;font-weight:800}h2{font-size:1.15rem;margin:1.2rem 0 .5rem}
 .sub{color:var(--mut);margin:0 0 1rem}.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:10px 0}
-.row{display:flex;gap:8px;flex-wrap:wrap}.chip{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:8px 14px;font:inherit;color:var(--ink);cursor:pointer}
+.row{display:flex;gap:8px;flex-wrap:wrap}.chip{border:1.5px solid var(--line);background:var(--card);border-radius:999px;padding:8px 14px;font:inherit;color:var(--tx);cursor:pointer}
 .chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
 .btn{background:var(--saf);color:var(--ink);border:0;border-radius:12px;padding:14px 20px;font:inherit;font-weight:800;width:100%;cursor:pointer;margin-top:12px}
 .btn.alt{background:var(--ink);color:#fff}.btn:focus-visible,.chip:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--mint);outline-offset:2px}
@@ -17,10 +17,10 @@ h1{font-size:1.5rem;margin:.2rem 0 .1rem;font-weight:800}h2{font-size:1.15rem;ma
 .stat b{display:block;font-size:1.4rem}.stat span{font-size:.75rem;opacity:.8}
 .q{font-size:2.4rem;font-weight:800;text-align:center;margin:24px 0 12px;letter-spacing:.5px}
 .bar{height:8px;background:var(--line);border-radius:9px;overflow:hidden}.bar i{display:block;height:100%;background:var(--mint);width:100%}
-input.ans,textarea{width:100%;font:inherit;font-size:1.6rem;text-align:center;border:2px solid var(--ink);border-radius:12px;padding:12px;background:#fff;color:var(--ink)}
+input.ans,textarea{width:100%;font:inherit;font-size:1.6rem;text-align:center;border:2px solid var(--ink);border-radius:12px;padding:12px;background:var(--card);color:var(--tx)}
 textarea{font-size:1rem;text-align:left;height:150px}
 .ok{color:var(--mint);font-weight:800}.bad{color:var(--red);font-weight:800}.tip{background:#fff6e5;border-left:4px solid var(--saf);padding:10px 12px;border-radius:8px;margin-top:10px}
-.pass{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px;max-height:150px;overflow:auto;margin:8px 0;user-select:none}
+.pass{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;max-height:150px;overflow:auto;margin:8px 0;user-select:none}
 table{width:100%;border-collapse:collapse;font-size:.85rem}th,td{padding:7px 6px;border-bottom:1px solid var(--line);text-align:left}
 .scroll{overflow-x:auto}nav{position:fixed;left:0;right:0;bottom:0;background:var(--ink);display:flex;padding:6px 6px calc(6px + env(safe-area-inset-bottom));z-index:9}
 nav button{flex:1;background:none;border:0;color:#fff;opacity:.65;font:inherit;font-size:.8rem;padding:10px 2px;cursor:pointer;border-radius:10px}
@@ -36,6 +36,9 @@ body{background:radial-gradient(1200px 380px at 50% -120px,#e4e1ff,var(--paper) 
 nav{left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom));border-radius:22px;max-width:520px;margin:0 auto;box-shadow:0 10px 30px #1b1f4b55}
 .foot{text-align:center;color:var(--mut);font-size:.8rem;margin:20px 0 8px}
 .badge{display:inline-block;margin:4px 6px 0 0;padding:6px 12px;border-radius:999px;font-size:.8rem;background:#ecebf5;color:var(--mut)}.badge.on{background:var(--mint);color:#fff}
+[data-theme=dark]{--paper:#0f1130;--card:#1a1d46;--line:#34386e;--mut:#a9acd2;--tx:#ecebff}
+[data-theme=dark] body{background:var(--paper)}[data-theme=dark] .tip{background:#3a2e12}[data-theme=dark] .badge{background:#2a2e5e}
+[data-theme=dark] .chip.on{background:#3a3f9c;border-color:#3a3f9c}[data-theme=dark] .stat{background:#2b2f6b}[data-theme=dark] input.ans,[data-theme=dark] textarea{border-color:#6a6fd6}
 </style></head><body><div id="app"></div><div class="foot" id="ft"></div>
 <nav id="nav"></nav>
 <script>
@@ -45,7 +48,7 @@ const ADMIN_PIN=BRAND.pin;
 const K='vp_log',$=s=>document.querySelector(s),app=$('#app');
 const load=()=>{try{return JSON.parse(localStorage.getItem(K))||[]}catch(e){return[]}};
 const save=e=>{try{const l=load();l.push(Object.assign({t:Date.now(),d:today()},e));localStorage.setItem(K,JSON.stringify(l))}catch(e){}};
-const today=()=>new Date().toLocaleDateString('en-CA'),R=(a,b)=>a+Math.floor(Math.random()*(b-a+1));
+const today=()=>new Date().toLocaleDateString('en-CA'),R=(a,b)=>a+Math.floor(rnd()*(b-a+1));let rnd=Math.random;
 const EX={state:{n:'State exams',t:25,l:1},bank:{n:'Bank (IBPS/SBI)',t:18,l:2},ssc:{n:'SSC (CGL/CHSL)',t:15,l:3}};
 const T={
 tbl:{n:'Tables',tip:'Split one number: 17×8 = 10×8 + 7×8 = 80 + 56.',g:l=>{const a=R(11,[0,20,25,35][l]),b=R(3,[0,9,12,19][l]);return[`${a} × ${b}`,a*b]}},
@@ -58,10 +61,10 @@ root:{n:'Square roots',tip:'Last digit gives the root’s last digit (…4 → 2
 fr:{n:'Fraction ↔ %',tip:'Memorise 1/8 = 12.5%, 1/16 = 6.25%, 1/6 = 16.67%. Multiply for k/8.',g:l=>{const k=R(1,7);return[`${k}/8 as %`,12.5*k]}}};
 const TIPS=[['Multiply by 5','Halve the number, add a zero (46 × 5 → 23 → 230).'],['Multiply by 9, 99','n×9 = n×10 − n. n×99 = n×100 − n.'],['Percentage swap','8% of 25 = 25% of 8 = 2. Pick the easier side.'],['Successive discount','a% then b% = a + b − ab/100. 20% then 10% = 28% off.'],['Percentage change','Increase x% then decrease x% always leaves a loss of x²/100 %.'],['Squares near 50','(50+d)² = 2500 + 100d + d². 53² = 2500+300+9 = 2809.'],['Divisibility','By 3 or 9: add the digits. By 11: difference of alternate digit sums.'],['Ratio to %','1/7 = 14.28%, 1/9 = 11.11%, 1/11 = 9.09%. Know these for DI sets.']];
 const PASS=['The Reserve Bank of India regulates the issue of currency notes and keeps the reserves needed to secure monetary stability in the country. Banks accept deposits from the public and lend the funds to individuals and businesses at a fixed rate of interest.','The Staff Selection Commission conducts competitive examinations to recruit candidates for various posts in ministries and departments of the Government of India. Accuracy and speed in data entry are essential skills for clerical positions.','Digital payments have grown rapidly across the country in recent years. Citizens now use mobile applications to pay bills, transfer money and receive subsidies directly in their bank accounts without visiting a branch.'];
-let tab='prac',cfg={ex:'bank',tp:'mix',n:10,mn:20,mm:20,lv:0},S=null,TT=null,M=null,tm=null;
-const NAV=[['prac','Practice'],['mock','Mock'],['tips','Tricks'],['type','Typing'],['admin','Admin']];
+let tab='prac',cfg={ex:'bank',tp:'mix',n:10,mn:20,mm:20,lv:0},S=null,TT=null,M=null,tm=null,dp=null;
+const NAV=[['prac','Practice'],['mock','Mock'],['type','Typing'],['more','More'],['admin','Admin']];
 function nav(){$('#nav').innerHTML=NAV.map(([k,v])=>`<button class="${tab==k?'on':''}" onclick="go('${k}')">${v}</button>`).join('')}
-function go(k){clearInterval(tm);S=null;TT=null;M=null;tab=k;nav();({prac:home,mock:mockSetup,tips:tips,type:typeSetup,admin:admin})[k]()}
+function go(k){clearInterval(tm);if(S&&S.kn)cfg.n=S.kn;S=null;TT=null;M=null;tab=k;nav();({prac:home,mock:mockSetup,more:more,type:typeSetup,admin:admin})[k]()}
 const chips=(obj,key,lab)=>Object.entries(obj).map(([k,v])=>`<button class="chip ${cfg[key]==k?'on':''}" onclick="cfg.${key}='${k}';home()">${lab(v)}</button>`).join('');
 const LV=['Beginner','Apprentice','Calculator','Speedster','Sharpshooter','Ace','Vedic Master'],need=n=>Math.round(120*(n-1)**1.6);
 const xp=()=>load().reduce((a,x)=>a+(x.ty=='t'?x.wpm*3:x.ok*10),0);
@@ -77,7 +80,7 @@ app.innerHTML=`<div class="hero"><div class="logo"><i>${BRAND.mark}</i><div><b s
 <div class="xpbar"><i style="width:${Math.round(v.cur/v.span*100)}%"></i></div><div style="font-size:.75rem;opacity:.75;margin-top:4px">${v.span-v.cur} XP to level ${v.n+1}</div></div>
 <div class="card"><b>Daily goal</b><span class="sub" style="float:right;margin:0">${q} / ${BRAND.goal} questions</span><div class="bar" style="margin:8px 0 12px"><i style="width:${g}%;background:var(--saf)"></i></div>
 <div class="stats"><div class="stat"><b>${q}</b><span>questions</span></div><div class="stat"><b>${q?Math.round(ok/q*100):0}%</b><span>accuracy</span></div><div class="stat"><b>${m}</b><span>minutes</span></div></div></div>
-${w?`<button class="btn alt" onclick="cfg.tp='${w}';start()">Drill your weakest topic: ${T[w].n}</button>`:''}
+${dp?'<button class="btn alt" onclick="inst()">Install app on your phone</button>':''}${w?`<button class="btn alt" onclick="cfg.tp='${w}';start()">Drill your weakest topic: ${T[w].n}</button>`:''}
 <h2>Exam pattern</h2><div class="row">${chips(EX,'ex',v=>v.n)}</div>
 <h2>Topic</h2><div class="row">${chips(Object.assign({mix:{n:'Mixed'}},T),'tp',v=>v.n)}</div>
 <h2>Difficulty</h2><div class="row">${ch([0,1,2,3],'lv',n=>['Auto','Easy','Medium','Hard'][n])}</div>
@@ -85,61 +88,127 @@ ${w?`<button class="btn alt" onclick="cfg.tp='${w}';start()">Drill your weakest 
 <button class="btn" onclick="start()">Start practice</button>
 <h2>Badges</h2>${badges(A).map(b=>`<span class="badge ${b[1]?'on':''}">${b[1]?'✓ ':''}${b[0]}</span>`).join('')}`}
 function start(){S={i:0,ok:0,w:[],secs:0};next()}
-function next(){if(S.i>=cfg.n)return fin();const e=EX[cfg.ex],ks=Object.keys(T),k=cfg.tp=='mix'?ks[R(0,ks.length-1)]:cfg.tp,[q,a]=T[k].g(cfg.lv||e.l);Object.assign(S,{q,a,k,lock:0,t0:Date.now()});
-app.innerHTML=`<div class="sub">Question ${S.i+1} of ${cfg.n} · ${T[k].n}</div><div class="bar"><i id="b"></i></div><div class="q">${q}</div>
+function next(){if(S.i>=cfg.n)return fin();const e=EX[cfg.ex],ks=Object.keys(T);let k,q,a,so;if(S.pre){({k,q,a,so}=S.pre[S.i])}else{k=cfg.tp=='mix'?ks[R(0,ks.length-1)]:cfg.tp;[q,a,so]=T[k].g(cfg.lv||e.l)}so=so||SOL[k](q,a);Object.assign(S,{q,a,k,so,lock:0,t0:Date.now()});
+app.innerHTML=`<div class="sub">Question ${S.i+1} of ${cfg.n} · ${T[k].n}</div><div class="bar"><i id="b"></i></div><div class="q" style="${q.length>26?'font-size:1.25rem':''}">${q}</div>
 <input class="ans" id="in" inputmode="decimal" autocomplete="off" placeholder="Answer"><div id="fb"></div><button class="btn alt" id="go" onclick="sub()">Check</button>`;
 const el=$('#in');el.focus();el.onkeydown=e=>{if(e.key=='Enter')S.lock?next():sub()};clearInterval(tm);
 tm=setInterval(()=>{const l=1-(Date.now()-S.t0)/(e.t*1000);$('#b').style.width=Math.max(0,l*100)+'%';if(l<=0)sub(1)},200)}
 function sub(to){if(S.lock)return;S.lock=1;clearInterval(tm);const v=$('#in').value.trim(),s=Math.min((Date.now()-S.t0)/1000,EX[cfg.ex].t);S.secs+=s;
-const ok=!to&&v!==''&&Math.abs(parseFloat(v)-S.a)<.01;tpUp(S.k,ok?1:0,s);S.i++;if(ok)S.ok++;else S.w.push([S.q,v||'—',S.a]);
-$('#fb').innerHTML=`<p class="${ok?'ok':'bad'}">${ok?'Correct':to?'Time up':'Not quite'} — answer ${S.a}</p><div class="tip">${T[S.k].tip}</div>`;$('#in').disabled=true;
+const ok=!to&&v!==''&&Math.abs(parseFloat(v)-S.a)<.01;tpUp(S.k,ok?1:0,s);fx(ok);if(S.kind=='nb')mbRes(S.q,ok);else if(!ok)mbAdd({k:S.k,q:S.q,a:S.a,so:S.so});S.i++;if(ok)S.ok++;else S.w.push([S.q,v||'—',S.a]);
+$('#fb').innerHTML=`<p class="${ok?'ok':'bad'}">${ok?'Correct':to?'Time up':'Not quite'} — answer ${S.a}</p><div class="tip"><b>Solution:</b> ${S.so}<br><small>${T[S.k].tip}</small></div>`;$('#in').disabled=true;
 $('#go').textContent=S.i>=cfg.n?'See result':'Next question';$('#go').onclick=next;$('#go').focus()}
-function fin(){const x0=xp();save({ty:'p',tp:cfg.tp,ex:cfg.ex,n:cfg.n,ok:S.ok,secs:Math.round(S.secs)});const x1=xp(),up=lv(x1).n>lv(x0).n;
-app.innerHTML=`<h1>${S.ok} / ${cfg.n} correct</h1><p class="ok">+${x1-x0} XP${up?' · Level up! You are now level '+lv(x1).n+' ('+lv(x1).t+')':''}</p><p class="sub">${Math.round(S.ok/cfg.n*100)}% accuracy · ${(S.secs/cfg.n).toFixed(1)} s per question</p>
+function fin(){const N=cfg.n;if(S.kn)cfg.n=S.kn;const x0=xp();save({ty:'p',tp:S.kind=='daily'?'daily':cfg.tp,ex:cfg.ex,n:N,ok:S.ok,secs:Math.round(S.secs)});const x1=xp(),up=lv(x1).n>lv(x0).n;
+app.innerHTML=`<h1>${S.ok} / ${N} correct</h1><p class="ok">+${x1-x0} XP${up?' · Level up! You are now level '+lv(x1).n+' ('+lv(x1).t+')':''}</p><p class="sub">${Math.round(S.ok/N*100)}% accuracy · ${(S.secs/N).toFixed(1)} s per question</p>
 ${S.w.length?`<h2>Review</h2><div class="card scroll"><table><tr><th>Question</th><th>You</th><th>Answer</th></tr>${S.w.map(w=>`<tr><td>${w[0]}</td><td class="bad">${w[1]}</td><td class="ok">${w[2]}</td></tr>`).join('')}</table></div>`:'<p class="ok">Perfect round.</p>'}
-<button class="btn" onclick="start()">Practice again</button><button class="btn alt" onclick="home()">Change topic</button>`}
+<button class="btn alt" onclick="card('${S.ok} / ${N}','${S.kind=='daily'?'Daily challenge':'Practice'} · ${Math.round(S.ok/N*100)}% accuracy')">Share score card</button><button class="btn" onclick="start()">Practice again</button><button class="btn alt" onclick="home()">Change topic</button>`}
 function tips(){app.innerHTML=`<h1>Vedic and percentage tricks</h1><p class="sub">Read one, then practise it.</p>`+Object.values(T).map(t=>`<div class="card"><b>${t.n}</b><br>${t.tip}</div>`).join('')+TIPS.map(t=>`<div class="card"><b>${t[0]}</b><br>${t[1]}</div>`).join('')}
 const MK={state:[1,.25],bank:[1,.25],ssc:[2,.5]},f=s=>Math.floor(s/60)+':'+String(s%60).padStart(2,'0');
 function mockSetup(){const m=MK[cfg.ex],b=(k,a,l)=>a.map(n=>`<button class="chip ${cfg[k]==n?'on':''}" onclick="cfg.${k}=${n};mockSetup()">${l(n)}</button>`).join('');
 app.innerHTML=`<h1>Mock test</h1><p class="sub">Timed full-length test with question palette, mark for review and negative marking.</p>
 <h2>Exam pattern</h2><div class="row">${chips(EX,'ex',v=>v.n).replace(/home\(\)/g,'mockSetup()')}</div>
 <h2>Questions</h2><div class="row">${b('mn',[20,30,50],n=>n)}</div><h2>Time</h2><div class="row">${b('mm',[10,20,30],n=>n+' min')}</div>
-<p class="sub" style="margin-top:12px">+${m[0]} for correct, −${m[1]} for wrong, 0 for skipped. The test submits itself when time ends.</p><button class="btn" onclick="mStart()">Start mock test</button>`}
-function mStart(){const ks=Object.keys(T),l=EX[cfg.ex].l;M={mm:cfg.mm,i:0,end:Date.now()+cfg.mm*60000,qs:Array.from({length:cfg.mn},()=>{const k=ks[R(0,ks.length-1)],[q,a]=T[k].g(l);return{q,a,k,v:'',mk:0,sec:0}})};mShow()}
+<p class="sub" style="margin-top:12px">+${m[0]} for correct, −${m[1]} for wrong, 0 for skipped. The test submits itself when time ends.</p><button class="btn" onclick="mStart()">Start mock test</button><button class="btn alt" onclick="mStart(1)">Start sectional mock (with cut-offs)</button>`}
+const SEC=[{n:'Simplification and Approximation',tp:['simp','appr','sq','cube'],q:10,min:8},{n:'Number Series',tp:['ser'],q:5,min:5},{n:'Quantitative Aptitude',tp:['pct','rat','pl','tw','si','avg','m11','base'],q:10,min:10},{n:'Data Interpretation',tp:['di'],q:5,min:7}];
+function mStart(sec){M={pl:sec?SEC:[{n:'Full mock',tp:Object.keys(T),q:cfg.mn,min:cfg.mm}],si:0,res:[],tp:{},wr:[],sec};mSec()}
+function mSec(){const p=M.pl[M.si],l=EX[cfg.ex].l;M.mm=p.min;M.i=0;M.end=Date.now()+p.min*60000;M.qs=Array.from({length:p.q},()=>{const k=p.tp[R(0,p.tp.length-1)],[q,a,so]=T[k].g(l);return{q,a,k,so:so||SOL[k](q,a),v:'',mk:0,sec:0}});mShow()}
 const pal=(x,i)=>(x.mk?'background:#ff9f1c;':x.v!==''?'background:#1f9e8f;color:#fff;':'')+(i==M.i?'border-color:#1b1f4b;border-width:3px':'');
 function mSave(){const q=M.qs[M.i],el=$('#in');if(el)q.v=el.value.trim();q.sec+=(Date.now()-M.t0)/1000;M.t0=Date.now()}
 function mGo(j){mSave();M.i=Math.max(0,Math.min(M.qs.length-1,j));mShow()}
 function mMark(){mSave();M.qs[M.i].mk=!M.qs[M.i].mk;mShow()}
 function mShow(){const q=M.qs[M.i];M.t0=Date.now();
-app.innerHTML=`<div style="position:sticky;top:0;background:var(--paper);padding:6px 0;z-index:5"><div class="row" style="justify-content:space-between;align-items:center"><b id="mt"></b><button class="chip" onclick="mEnd(1)">Submit test</button></div><div class="bar"><i id="b"></i></div></div>
-<div class="sub">Question ${M.i+1} of ${M.qs.length}</div><div class="q">${q.q}</div><input class="ans" id="in" inputmode="decimal" autocomplete="off" placeholder="Answer" value="${q.v}">
+app.innerHTML=`<div style="position:sticky;top:0;background:var(--paper);padding:6px 0;z-index:5"><div class="row" style="justify-content:space-between;align-items:center"><b id="mt"></b><button class="chip" onclick="mEnd(1)">${M.sec?'Submit section':'Submit test'}</button></div><div class="bar"><i id="b"></i></div></div>
+<div class="sub">${M.pl[M.si].n} · Question ${M.i+1} of ${M.qs.length}</div><div class="q" style="${q.q.length>26?'font-size:1.25rem':''}">${q.q}</div><input class="ans" id="in" inputmode="decimal" autocomplete="off" placeholder="Answer" value="${q.v}">
 <div class="row" style="margin-top:12px"><button class="chip" onclick="mGo(M.i-1)">Previous</button><button class="chip ${q.mk?'on':''}" onclick="mMark()">Mark for review</button><button class="chip" onclick="mGo(M.i+1)">Save and next</button></div>
 <h2>Question palette</h2><div class="row">${M.qs.map((x,i)=>`<button class="chip" style="min-width:44px;padding:8px;${pal(x,i)}" onclick="mGo(${i})">${i+1}</button>`).join('')}</div>
 <p class="sub">Green: answered. Orange: marked for review. White: not answered.</p>`;
 $('#in').onkeydown=e=>{if(e.key=='Enter')mGo(M.i+1)};clearInterval(tm);
 const u=()=>{const l=Math.max(0,Math.ceil((M.end-Date.now())/1000)),el=$('#mt');if(!el)return;el.textContent='Time left '+f(l);el.style.color=l<60?'var(--red)':'';$('#b').style.width=l/(M.mm*60)*100+'%';if(l<=0)mEnd()};u();tm=setInterval(u,500)}
-function mEnd(c){if(!M)return;if(c&&!confirm('Submit the test now?'))return;clearInterval(tm);mSave();const m=MK[cfg.ex],n=M.qs.length,tp={};let ok=0,wr=0;
-M.qs.forEach(x=>{const t=tp[x.k]=tp[x.k]||{n:0,ok:0,sec:0};t.n++;t.sec+=x.sec;if(x.v!==''){if(Math.abs(parseFloat(x.v)-x.a)<.01){ok++;t.ok++;x.r=1}else{wr++;x.r=2}}});
-const sc=ok*m[0]-wr*m[1],used=Math.min(M.mm*60,Math.round(M.mm*60-(M.end-Date.now())/1000)),sk=n-ok-wr,qs=M.qs;M=null;
-const x0=xp();save({ty:'m',ex:cfg.ex,n,ok,wr,score:sc,max:n*m[0],secs:used});const gain=xp()-x0;qs.forEach(x=>{if(x.v!=='')tpUp(x.k,x.r==1?1:0,x.sec)});
-app.innerHTML=`<h1>Score ${sc} / ${n*m[0]}</h1><p class="ok">+${gain} XP</p><p class="sub">${EX[cfg.ex].n} pattern · time used ${f(used)}</p>
-<div class="stats"><div class="stat"><b>${ok}</b><span>correct</span></div><div class="stat"><b>${wr}</b><span>wrong</span></div><div class="stat"><b>${sk}</b><span>skipped</span></div></div>
+function mEnd(c){if(!M)return;if(c&&!confirm('Submit now?'))return;clearInterval(tm);mSave();const m=MK[cfg.ex],p=M.pl[M.si];let ok=0,wr=0;
+M.qs.forEach(x=>{const t=M.tp[x.k]=M.tp[x.k]||{n:0,ok:0,sec:0};t.n++;t.sec+=x.sec;x.r=0;if(x.v!==''){const g=Math.abs(parseFloat(x.v)-x.a)<.01;x.r=g?1:2;if(g){ok++;t.ok++}else{wr++;mbAdd(x)}tpUp(x.k,g?1:0,x.sec)}if(x.r!=1)M.wr.push(x)});
+M.res.push({n:p.n,ok,wr,q:p.q,sc:ok*m[0]-wr*m[1],max:p.q*m[0],secs:Math.min(p.min*60,Math.round(p.min*60-(M.end-Date.now())/1000))});
+if(M.si+1<M.pl.length){M.si++;return mSec()}
+const Rs=M.res,sm=k=>Rs.reduce((a,x)=>a+x[k],0),sc=sm('sc'),max=sm('max'),n=sm('q'),tok=sm('ok'),twr=sm('wr'),secs=sm('secs'),x0=xp();
+save({ty:'m',ex:cfg.ex,n,ok:tok,wr:twr,score:sc,max,secs});const gain=xp()-x0,sec=M.sec,tp=M.tp,wl=M.wr,pass=Rs.every(x=>x.sc>=x.max*.4)&&sc>=max*.55;M=null;
+app.innerHTML=`<h1>Score ${sc} / ${max}</h1><p class="ok">+${gain} XP · time ${f(secs)}</p>${sec?`<p class="${pass?'ok':'bad'}">${pass?'PASS: all section cut-offs and the overall cut-off cleared':'NOT CLEARED: see the sections below'}</p><div class="card scroll"><table><tr><th>Section</th><th>Score</th><th>Cut-off</th><th>Result</th></tr>${Rs.map(x=>`<tr><td>${x.n}</td><td>${x.sc}/${x.max}</td><td>${(x.max*.4).toFixed(1)}</td><td class="${x.sc>=x.max*.4?'ok':'bad'}">${x.sc>=x.max*.4?'Pass':'Fail'}</td></tr>`).join('')}<tr><td><b>Overall</b></td><td>${sc}/${max}</td><td>${(max*.55).toFixed(1)}</td><td class="${sc>=max*.55?'ok':'bad'}">${sc>=max*.55?'Pass':'Fail'}</td></tr></table></div>`:''}
+<div class="stats"><div class="stat"><b>${tok}</b><span>correct</span></div><div class="stat"><b>${twr}</b><span>wrong</span></div><div class="stat"><b>${n-tok-twr}</b><span>skipped</span></div></div>
 <h2>Topic analysis</h2><div class="card scroll"><table><tr><th>Topic</th><th>Correct</th><th>Avg s/Q</th></tr>${Object.keys(tp).map(k=>`<tr><td>${T[k].n}</td><td>${tp[k].ok}/${tp[k].n}</td><td>${(tp[k].sec/tp[k].n).toFixed(1)}</td></tr>`).join('')}</table></div>
-<h2>Review</h2><div class="card scroll"><table><tr><th>Question</th><th>You</th><th>Answer</th></tr>${qs.filter(x=>x.r!=1).map(x=>`<tr><td>${x.q}</td><td class="bad">${x.v||'Skipped'}</td><td class="ok">${x.a}</td></tr>`).join('')||'<tr><td colspan=3>All correct.</td></tr>'}</table></div>
-<button class="btn" onclick="mockSetup()">New mock test</button>`}
+<h2>Review</h2><div class="card scroll"><table><tr><th>Question</th><th>You</th><th>Answer</th><th>Solution</th></tr>${wl.map(x=>`<tr><td>${x.q}</td><td class="bad">${x.v||'Skipped'}</td><td class="ok">${x.a}</td><td>${x.so}</td></tr>`).join('')||'<tr><td colspan=4>All correct.</td></tr>'}</table></div>
+<p class="sub">Wrong answers were added to your mistake notebook.</p><button class="btn alt" onclick="card('${sc} / ${max}','${sec?'Sectional mock':'Mock test'}')">Share score card</button><button class="btn" onclick="mockSetup()">New mock test</button>`}
+Object.assign(T,{
+simp:{n:'Simplification',tip:'BODMAS: brackets, orders, divide/multiply, then add/subtract.',g:l=>{const a=R(10,90),b=R(2,[0,9,15,25][l]),c=R(3,[0,9,12,19][l]),d=R(5,60);return[`${a} + ${b} × ${c} − ${d}`,a+b*c-d,`Multiply first: ${b} × ${c} = ${b*c}. Then ${a} + ${b*c} = ${a+b*c}. Then − ${d} = ${a+b*c-d}.`]}},
+appr:{n:'Approximation',tip:'Round each number to the nearest easy value, then calculate.',g:l=>{const a=R(10,60),b=R(3,[0,9,14,19][l]),x=(a*10-1)/10,y=(b*10+1)/10;return[`${x} × ${y} ≈ ?`,a*b,`${x} ≈ ${a} and ${y} ≈ ${b}. So ${a} × ${b} = ${a*b}.`]}},
+ser:{n:'Number series',tip:'Check differences, then differences of differences, then ×2 or ×3 patterns.',g:l=>{const t=R(1,[0,2,3,3][l]),d=R(2,9),a=R(1,20),s=[];let w;
+if(t==1){for(let i=0;i<5;i++)s.push(a+i*d);w=`Constant difference +${d}.`}
+else if(t==2){let x=a;const dd=R(1,3);for(let i=0;i<5;i++){s.push(x);x+=d+dd*i}w=`Differences grow by ${dd}: +${d}, +${d+dd}, +${d+2*dd}…`}
+else{let x=R(1,4);const m=R(2,3);for(let i=0;i<5;i++){s.push(x);x*=m}w=`Each term is ×${m}.`}
+return[s.slice(0,4).join(', ')+', ?',s[4],w+` Next term: ${s[4]}.`]}},
+rat:{n:'Ratio and proportion',tip:'Total parts = a + b. One part = amount ÷ total parts.',g:l=>{const a=R(1,6),b=R(a+1,9),k=R(2,[0,9,15,25][l]),N=(a+b)*k;return[`Divide ${N} in the ratio ${a}:${b}. Larger share?`,b*k,`Total parts = ${a}+${b} = ${a+b}. One part = ${N} ÷ ${a+b} = ${k}. Larger share = ${b} × ${k} = ${b*k}.`]}},
+pl:{n:'Profit and loss',tip:'Profit % = profit ÷ CP × 100. Cost prices that are multiples of 40 or 80 give easy percentages.',g:l=>{const p=[10,20,25,5,15,12.5,30,40][R(0,l==1?3:7)],cp=80*R(1,[0,5,12,25][l]),sp=cp*(100+p)/100;return[`CP ${cp}, SP ${sp}. Profit %?`,p,`Profit = ${sp} − ${cp} = ${sp-cp}. Profit % = ${sp-cp} ÷ ${cp} × 100 = ${p}%.`]}},
+tw:{n:'Time and work',tip:'Together = (x × y) ÷ (x + y) days. Or take the LCM as total work.',g:l=>{const[x,y,z]=[[10,15,6],[12,24,8],[20,30,12],[30,60,20],[15,30,10],[6,12,4],[18,36,12],[40,60,24]][R(0,l==1?3:7)];return[`A does a job in ${x} days, B in ${y}. Together, days?`,z,`Together = (${x} × ${y}) ÷ (${x} + ${y}) = ${x*y} ÷ ${x+y} = ${z} days.`]}},
+si:{n:'Simple and compound interest',tip:'SI = P×R×T ÷ 100. CI for 2 years at r% = 2r + r²/100 percent of P.',g:l=>{const P=100*R(1,[0,10,20,30][l]);if(l>1&&R(0,1)){const r=[10,20][R(0,1)],c=2*r+r*r/100;return[`CI on ${P} at ${r}% for 2 years?`,P*c/100,`2-year CI % = ${r}+${r}+${r}×${r}/100 = ${c}%. ${c}% of ${P} = ${P*c/100}.`]}const r=[5,8,10,12][R(0,3)],t=R(2,4);return[`SI on ${P} at ${r}% for ${t} years?`,P*r*t/100,`SI = ${P} × ${r} × ${t} ÷ 100 = ${P*r*t/100}.`]}},
+avg:{n:'Averages',tip:'Total = average × count. New average = (old total + new value) ÷ (count + 1).',g:l=>{const n=R(4,[0,6,9,12][l]),a=R(10,50),d=R(2,9),x=a+(n+1)*d;return[`Average of ${n} numbers is ${a}. After adding ${x}, new average?`,a+d,`Old total = ${n} × ${a} = ${n*a}. New total = ${n*a} + ${x} = ${n*a+x}. New average = ${n*a+x} ÷ ${n+1} = ${a+d}.`]}},
+di:{n:'Data interpretation',tip:'% change = (new − old) ÷ old × 100. Pick only the two years asked.',g:l=>{const v=40*R(1,5),p=[10,25,50,20,75][R(0,4)],w=v*(100+p)/100,o=[R(20,90),R(20,90)];return[`Sales (₹ lakh): 2022: ${o[0]}, 2023: ${v}, 2024: ${w}, 2025: ${o[1]}. % rise 2023→2024?`,p,`Rise = ${w} − ${v} = ${w-v}. % = ${w-v} ÷ ${v} × 100 = ${p}%.`]}}});
+const N_=q=>q.match(/\d+(\.\d+)?/g).map(Number);
+const SOL={tbl:(q,a)=>{const[x,y]=N_(q),t=x-x%10;return`${x} × ${y} = ${t}×${y} + ${x%10}×${y} = ${t*y} + ${x%10*y} = ${a}.`},
+pct:(q,a)=>{const[p,n]=N_(q);return`${p}% of ${n} = ${p} × ${n} ÷ 100 = ${a}. Build it from 10% (${n/10}) and 5% (${n/20}).`},
+sq:(q,a)=>{const n=N_(q)[0],t=n-n%10,u=n%10;return`${n}² = ${t}² + 2×${t}×${u} + ${u}² = ${t*t} + ${2*t*u} + ${u*u} = ${a}.`},
+cube:(q,a)=>{const n=N_(q)[0];return`${n}³ = ${n} × ${n}² = ${n} × ${n*n} = ${a}.`},
+m11:(q,a)=>{const n=N_(q)[0];return`${n} × 11 = ${n}×10 + ${n} = ${n*10} + ${n} = ${a}.`},
+base:(q,a)=>{const[x,y]=N_(q),dx=100-x,dy=100-y;return`Base 100: deficits ${dx} and ${dy}. Cross: ${x} ${dy>=0?'−':'+'} ${Math.abs(dy)} = ${x-dy}. Deficits multiplied: ${dx}×${dy} = ${dx*dy}. Result: ${x-dy}×100 + ${dx*dy} = ${a}.`},
+root:(q,a)=>{const n=N_(q)[0],t=a-a%10;return`√${n} lies between ${t}² = ${t*t} and ${t+10}² = ${(t+10)**2}. Last digit ${n%10} → ${a}.`},
+fr:(q,a)=>{const k=N_(q)[0];return`1/8 = 12.5%, so ${k}/8 = ${k} × 12.5% = ${a}%.`}};
+/* mistake notebook (Leitner boxes) */
+const nbL=()=>{try{return JSON.parse(localStorage.getItem('vp_mb'))||[]}catch(e){return[]}},nbS=l=>{try{localStorage.setItem('vp_mb',JSON.stringify(l))}catch(e){}};
+function mbAdd(x){const l=nbL(),i=l.findIndex(y=>y.q==x.q),it={k:x.k,q:x.q,a:x.a,so:x.so,box:0,due:Date.now()};if(i<0)l.push(it);else l[i]=it;nbS(l)}
+function mbRes(q,ok){let l=nbL();const it=l.find(y=>y.q==q);if(!it)return;if(ok){it.box++;it.due=Date.now()+[0,1,3,7][it.box]*864e5;if(it.box>=3)l=l.filter(y=>y!==it)}else{it.box=0;it.due=Date.now()}nbS(l)}
+function startSet(l,kind){if(!l.length){alert('Nothing due right now.');return}S={i:0,ok:0,w:[],secs:0,pre:l,kind,kn:cfg.n};cfg.n=l.length;next()}
+function nbStart(){startSet(nbL().filter(x=>x.due<=Date.now()).slice(0,15),'nb')}
+function daily(){let h=0;for(const c of today())h=(h*31+c.charCodeAt(0))>>>0;rnd=()=>{h|=0;h=h+0x6D2B79F5|0;let t=Math.imul(h^h>>>15,1|h);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296};
+const ks=Object.keys(T),l=[];for(let i=0;i<10;i++){const k=ks[R(0,ks.length-1)],[q,a,so]=T[k].g(2);l.push({k,q,a,so:so||SOL[k](q,a)})}rnd=Math.random;startSet(l,'daily')}
+function more(){const nb=nbL(),due=nb.filter(x=>x.due<=Date.now()).length;app.innerHTML=`<h1>More</h1><p class="sub">Daily challenge, notebook, sectional mock, shortcuts and settings.</p>`+[['Daily challenge','The same 10 questions for every learner today.','daily()'],['Mistake notebook',due+' due now, '+nb.length+' saved. Missed questions come back until you get them right.','nbStart()'],['Sectional mock','4 timed sections with cut-offs, like the real exam.','mStart(1)'],['Tricks','Vedic and percentage shortcuts.','tips()'],['Settings','Language, theme, sound, reminder and install.','settings()']].map(x=>`<div class="card" role="button" tabindex="0" onclick="${x[2]}" style="cursor:pointer"><b>${x[0]}</b><br><span class="sub" style="margin:0">${x[1]}</span></div>`).join('')}
+/* settings, language, theme */
+let ST=(()=>{try{return JSON.parse(localStorage.getItem('vp_set'))||{}}catch(e){return{}}})();ST=Object.assign({lang:'en',theme:'auto',snd:'1',rem:''},ST);
+function setS(k,v){ST[k]=v;try{localStorage.setItem('vp_set',JSON.stringify(ST))}catch(e){}if(k=='rem'&&v&&'Notification' in window)Notification.requestPermission();applyS();nav();settings()}
+function applyS(){document.documentElement.dataset.theme=(ST.theme=='dark'||(ST.theme=='auto'&&matchMedia('(prefers-color-scheme:dark)').matches))?'dark':'light'}
+function settings(){const o=(k,a)=>a.map(([v,l])=>`<button class="chip ${ST[k]==v?'on':''}" onclick="setS('${k}','${v}')">${l}</button>`).join('');
+app.innerHTML=`<h1>Settings</h1><h2>Language</h2><div class="row">${o('lang',[['en','English'],['hi','हिन्दी'],['bn','বাংলা']])}</div><h2>Theme</h2><div class="row">${o('theme',[['auto','Auto'],['light','Light'],['dark','Dark']])}</div>
+<h2>Sound and haptics</h2><div class="row">${o('snd',[['1','On'],['0','Off']])}</div><h2>Daily reminder</h2><div class="row">${o('rem',[['','Off'],['8','8 am'],['18','6 pm'],['21','9 pm']])}</div>
+<p class="sub">Reminders show when the app is installed and running in the background.</p>${dp?'<button class="btn" onclick="inst()">Install app on your phone</button>':'<p class="sub">iPhone: Share → Add to Home Screen. Android Chrome: menu → Install app.</p>'}`}
+const D={hi:{'Practice again':'फिर अभ्यास करें','Start practice':'अभ्यास शुरू करें','Practice':'अभ्यास','Mock test':'मॉक टेस्ट','Start mock test':'मॉक टेस्ट शुरू करें','Mock':'मॉक','Typing test':'टाइपिंग टेस्ट','Start typing test':'टाइपिंग टेस्ट शुरू करें','Typing':'टाइपिंग','More':'और','Admin':'एडमिन','Check':'जाँचें','Next question':'अगला प्रश्न','See result':'परिणाम देखें','Exam pattern':'परीक्षा पैटर्न','Topic':'विषय','Difficulty':'कठिनाई','Questions':'प्रश्न','Daily goal':'दैनिक लक्ष्य','Level':'स्तर','day streak':'दिन की लय','Badges':'बैज','Correct':'सही','Not quite':'ग़लत','Time up':'समय समाप्त','answer':'उत्तर','Time left':'बचा समय','Question palette':'प्रश्न पैलेट','Question':'प्रश्न','Previous':'पिछला','Mark for review':'समीक्षा हेतु चिह्नित करें','Save and next':'सहेजें और आगे','Submit test':'टेस्ट जमा करें','Submit section':'सेक्शन जमा करें','Score':'स्कोर','wrong':'ग़लत','skipped':'छोड़े','correct':'सही','Review':'समीक्षा','Duration':'अवधि','Try again':'फिर कोशिश करें','accuracy':'सटीकता','Daily challenge':'दैनिक चुनौती','Mistake notebook':'गलतियों की नोटबुक','Settings':'सेटिंग्स','Language':'भाषा','Tricks':'ट्रिक्स','Divide':'बाँटें','in the ratio':'अनुपात में','Larger share':'बड़ा हिस्सा','Easy':'आसान','Medium':'मध्यम','Hard':'कठिन','Solution':'हल','Install app on your phone':'फ़ोन पर ऐप इंस्टॉल करें','Share score card':'स्कोर कार्ड शेयर करें'},
+bn:{'Practice again':'আবার অনুশীলন','Start practice':'অনুশীলন শুরু করুন','Practice':'অনুশীলন','Mock test':'মক টেস্ট','Start mock test':'মক টেস্ট শুরু করুন','Mock':'মক','Typing test':'টাইপিং টেস্ট','Start typing test':'টাইপিং টেস্ট শুরু করুন','Typing':'টাইপিং','More':'আরও','Admin':'অ্যাডমিন','Check':'যাচাই করুন','Next question':'পরের প্রশ্ন','See result':'ফলাফল দেখুন','Exam pattern':'পরীক্ষার ধরন','Topic':'বিষয়','Difficulty':'কঠিনতা','Questions':'প্রশ্ন','Daily goal':'দৈনিক লক্ষ্য','Level':'স্তর','day streak':'দিনের ধারা','Badges':'ব্যাজ','Correct':'সঠিক','Not quite':'ভুল','Time up':'সময় শেষ','answer':'উত্তর','Time left':'বাকি সময়','Question palette':'প্রশ্ন প্যালেট','Question':'প্রশ্ন','Previous':'আগের','Mark for review':'পর্যালোচনার জন্য চিহ্নিত করুন','Save and next':'সংরক্ষণ করে পরেরটি','Submit test':'টেস্ট জমা দিন','Submit section':'সেকশন জমা দিন','Score':'স্কোর','wrong':'ভুল','skipped':'বাদ','correct':'সঠিক','Review':'পর্যালোচনা','Duration':'সময়কাল','Try again':'আবার চেষ্টা করুন','accuracy':'নির্ভুলতা','Daily challenge':'দৈনিক চ্যালেঞ্জ','Mistake notebook':'ভুলের খাতা','Settings':'সেটিংস','Language':'ভাষা','Tricks':'ট্রিকস','Divide':'ভাগ করুন','in the ratio':'অনুপাতে','Larger share':'বড় অংশ','Easy':'সহজ','Medium':'মাঝারি','Hard':'কঠিন','Solution':'সমাধান','Install app on your phone':'ফোনে অ্যাপ ইনস্টল করুন','Share score card':'স্কোর কার্ড শেয়ার করুন'}};
+const KS={};for(const l in D)KS[l]=Object.keys(D[l]).sort((a,b)=>b.length-a.length);
+function tr(r){const d=D[ST.lang];if(!d||!r||!r.nodeType)return;const w=document.createTreeWalker(r,NodeFilter.SHOW_TEXT);let n;while(n=w.nextNode()){let v=n.nodeValue;for(const k of KS[ST.lang])if(v.includes(k))v=v.split(k).join(d[k]);if(v!=n.nodeValue)n.nodeValue=v}}
+/* feedback, share card, install, reminders, passages */
+function fx(ok){try{if(ST.snd=='0')return;navigator.vibrate&&navigator.vibrate(ok?30:[60,40,60]);const a=new(window.AudioContext||window.webkitAudioContext)(),o=a.createOscillator(),g=a.createGain();o.frequency.value=ok?880:220;g.gain.value=.05;o.connect(g);g.connect(a.destination);o.start();o.stop(a.currentTime+.12)}catch(e){}}
+function card(a,b){const c=document.createElement('canvas');c.width=c.height=1080;const x=c.getContext('2d'),g=x.createLinearGradient(0,0,1080,1080),L=lv(xp());g.addColorStop(0,BRAND.c1);g.addColorStop(1,'#3a3f9c');x.fillStyle=g;x.fillRect(0,0,1080,1080);x.fillStyle=BRAND.c2;x.beginPath();x.arc(920,160,200,0,7);x.fill();x.fillStyle='#fff';
+x.font='800 64px Sora,sans-serif';x.fillText(BRAND.name,80,140);x.font='800 150px Sora,sans-serif';x.fillText(a,80,560);x.font='48px Sora,sans-serif';x.fillText(b,80,650);x.font='40px Sora,sans-serif';x.fillText('Level '+L.n+' · '+L.t,80,800);x.font='32px Sora,sans-serif';x.fillText(BRAND.credit,80,1000);
+c.toBlob(async bl=>{const f=new File([bl],'score.png',{type:'image/png'});if(navigator.canShare&&navigator.canShare({files:[f]})){try{await navigator.share({files:[f],text:BRAND.name})}catch(e){}}else{const l=document.createElement('a');l.href=URL.createObjectURL(bl);l.download='score.png';l.click()}})}
+addEventListener('beforeinstallprompt',e=>{e.preventDefault();dp=e;if(tab=='prac'&&!S)home()});addEventListener('appinstalled',()=>{dp=null});
+function inst(){if(dp){dp.prompt();dp.userChoice.finally(()=>{dp=null;go(tab)})}}
+if('serviceWorker' in navigator)addEventListener('load',()=>navigator.serviceWorker.register('/sw.js').catch(()=>{}));
+function remind(){try{if(!ST.rem||Notification.permission!='granted')return;const d=today();if(new Date().getHours()<+ST.rem||localStorage.getItem('vp_rm')==d||load().some(x=>x.d==d))return;localStorage.setItem('vp_rm',d);navigator.serviceWorker.ready.then(r=>r.showNotification(BRAND.name,{body:'Keep your streak alive: practise for 5 minutes today.',icon:'/icon-192.png'}))}catch(e){}}
+setInterval(remind,6e4);
+function addPass(){const v=$('#pa').value.trim();if(v.split(/\s+/).length<15){alert('Paste at least 15 words.');return}const l=cp();l.push(v);localStorage.setItem('vp_pass',JSON.stringify(l));dash()}
+function delPass(i){const l=cp();l.splice(i,1);localStorage.setItem('vp_pass',JSON.stringify(l));dash()}
 let tmin=5;
-function typeSetup(){app.innerHTML=`<h1>Typing test</h1><p class="sub">Govt exam style: net speed counts only correct words. A common English target is 35 WPM.</p>
+let tl='en';const PL={en:PASS,hi:['भारतीय रिज़र्व बैंक देश में मुद्रा जारी करता है और मौद्रिक स्थिरता बनाए रखता है। बैंक जनता से जमा स्वीकार करते हैं और ऋण देते हैं।'],bn:['ভারতীয় রিজার্ভ ব্যাংক দেশে মুদ্রা প্রকাশ করে এবং আর্থিক স্থিতিশীলতা বজায় রাখে। ব্যাংকগুলি জনসাধারণের কাছ থেকে আমানত গ্রহণ করে এবং ঋণ প্রদান করে।']};
+const cp=()=>{try{return JSON.parse(localStorage.getItem('vp_pass'))||[]}catch(e){return[]}},lg=x=>/[\u0980-\u09FF]/.test(x)?'bn':/[\u0900-\u097F]/.test(x)?'hi':'en';
+function typeSetup(){app.innerHTML=`<h1>Typing test</h1><p class="sub">Government exam style: net speed counts only correct words. A common English target is 35 WPM. Hindi and Bengali need that keyboard enabled on your device.</p>
+<h2>Language</h2><div class="row">${[['en','English'],['hi','हिन्दी'],['bn','বাংলা']].map(([k,n])=>`<button class="chip ${tl==k?'on':''}" onclick="tl='${k}';typeSetup()">${n}</button>`).join('')}</div>
 <h2>Duration</h2><div class="row">${[1,5,10].map(m=>`<button class="chip ${tmin==m?'on':''}" onclick="tmin=${m};typeSetup()">${m} min</button>`).join('')}</div>
 <button class="btn" onclick="tStart()">Start typing test</button>`}
-function tStart(){const p=PASS[R(0,2)],txt=(p+' ').repeat(10).trim();TT={p:txt.split(' '),t0:0,dur:tmin*60};
-app.innerHTML=`<div class="sub" id="tt">Timer starts when you type.</div><div class="bar"><i id="b"></i></div><div class="pass">${txt}</div>
-<textarea id="ta" placeholder="Start typing here" onpaste="return false" autocomplete="off" autocorrect="off" spellcheck="false"></textarea><button class="btn alt" onclick="tEnd()">Finish now</button>`;
-$('#ta').focus();$('#ta').oninput=()=>{if(TT.t0)return;TT.t0=Date.now();tm=setInterval(()=>{const e=(Date.now()-TT.t0)/1000,l=TT.dur-e;$('#b').style.width=Math.max(0,l/TT.dur*100)+'%';$('#tt').textContent=Math.max(0,Math.ceil(l))+' s left';if(l<=0)tEnd()},250)}}
-function tEnd(){clearInterval(tm);if(!TT)return;const v=$('#ta').value,w=v.trim()?v.trim().split(/\s+/):[],e=Math.max((Date.now()-(TT.t0||Date.now()))/60000,.05);
-let err=0;w.forEach((x,i)=>{if(x!=TT.p[i])err++});const gross=v.length/5/e,net=Math.max(0,gross-err/e),acc=w.length?Math.round((w.length-err)/w.length*100):0;
-save({ty:'t',n:w.length,secs:Math.round(e*60),wpm:Math.round(net),acc});TT=null;
+function tStart(){const b=PL[tl].concat(cp().filter(x=>lg(x)==tl)),p=b[R(0,b.length-1)],w=(p+' ').repeat(Math.ceil(400/p.split(' ').length)).trim().split(' ');TT={p:w,t0:0,dur:tmin*60,bk:0};
+app.innerHTML=`<div class="sub" id="tt">Timer starts when you type.</div><div class="bar"><i id="b"></i></div><div class="pass" id="ps"></div><textarea id="ta" placeholder="Start typing here" onpaste="return false" autocomplete="off" autocorrect="off" spellcheck="false"></textarea><button class="btn alt" onclick="tEnd()">Finish now</button>`;
+const ta=$('#ta');tPaint('');ta.focus();ta.onkeydown=e=>{if(e.key=='Backspace')TT.bk++};
+ta.oninput=()=>{tPaint(ta.value);if(TT.t0)return;TT.t0=Date.now();tm=setInterval(()=>{const e=(Date.now()-TT.t0)/1000,l=TT.dur-e;$('#b').style.width=Math.max(0,l/TT.dur*100)+'%';$('#tt').textContent=Math.max(0,Math.ceil(l))+' s left';if(l<=0)tEnd()},250)}}
+function tPaint(v){const t=v.split(' '),c=t.length-1,ps=$('#ps');ps.innerHTML=TT.p.slice(0,c+30).map((w,i)=>{let s='';if(i<c)s=t[i]==w?'color:#1f9e8f':'color:#d63a45;text-decoration:line-through';else if(i==c)s=w.startsWith(t[i])?'background:#fff1d6;color:#1b1f4b':'background:#ffd6d9;color:#1b1f4b';return`<span style="${s}">${w}</span>`}).join(' ');const el=ps.children[c];if(el)ps.scrollTop=Math.max(0,el.offsetTop-50)}
+function tEnd(){clearInterval(tm);if(!TT)return;const v=$('#ta').value,w=v.trim()?v.trim().split(/\s+/):[],e=Math.max((Date.now()-(TT.t0||Date.now()))/60000,.05),miss={};let err=0;
+w.forEach((x,i)=>{if(x!=TT.p[i]){err++;miss[TT.p[i]]=(miss[TT.p[i]]||0)+1}});const bk=TT.bk,gross=v.length/5/e,net=Math.max(0,gross-err/e),acc=w.length?Math.round((w.length-err)/w.length*100):0;
+save({ty:'t',n:w.length,secs:Math.round(e*60),wpm:Math.round(net),acc,lang:tl});TT=null;const top=Object.entries(miss).sort((a,b)=>b[1]-a[1]).slice(0,6);
 app.innerHTML=`<h1>${Math.round(net)} net WPM</h1><p class="ok">+${Math.round(net)*3} XP</p><div class="stats"><div class="stat"><b>${Math.round(gross)}</b><span>gross WPM</span></div><div class="stat"><b>${acc}%</b><span>accuracy</span></div><div class="stat"><b>${err}</b><span>wrong words</span></div></div>
-<button class="btn" onclick="typeSetup()">Try again</button>`}
+<h2>Mistake report</h2><div class="card">Backspaces: <b>${bk}</b><br>${top.length?'Most missed words: '+top.map(a=>`<b>${a[0]}</b> (${a[1]})`).join(', '):'No missed words.'}</div>
+<button class="btn alt" onclick="card('${Math.round(net)} WPM','Typing test · ${acc}% accuracy')">Share score card</button><button class="btn" onclick="typeSetup()">Try again</button>`}
+
 function admin(){app.innerHTML=`<h1>Admin</h1><p class="sub">Enter PIN to view usage.</p><input class="pin" id="pin" type="password" inputmode="numeric" placeholder="PIN"> <button class="chip on" onclick="$('#pin').value==ADMIN_PIN?dash():alert('Wrong PIN')">Open</button>`}
 function dash(){const L=load(),P=L.filter(x=>x.ty=='p'),Ty=L.filter(x=>x.ty=='t'),Mo=L.filter(x=>x.ty=='m'),days={},tops={};
 P.forEach(x=>{const d=days[x.d]=days[x.d]||{s:0,q:0,ok:0,sec:0};d.s++;d.q+=x.n;d.ok+=x.ok;d.sec+=x.secs;const t=tops[x.tp]=tops[x.tp]||{q:0,ok:0,sec:0};t.q+=x.n;t.ok+=x.ok;t.sec+=x.secs});
@@ -147,10 +216,11 @@ const best=Ty.reduce((a,x)=>Math.max(a,x.wpm),0),avg=Ty.length?Math.round(Ty.red
 app.innerHTML=`<h1>Usage dashboard</h1><p class="sub">Data from this device. For all learners, connect a database (see deploy notes).</p>
 <div class="stats"><div class="stat"><b>${P.length}</b><span>practice sessions</span></div><div class="stat"><b>${Ty.length}</b><span>typing tests</span></div><div class="stat"><b>${best}/${avg}</b><span>best / avg WPM</span></div></div>
 <h2>Daily usage</h2><div class="card scroll"><table><tr><th>Date</th><th>Sessions</th><th>Qs</th><th>Score</th><th>Mins</th><th>s/Q</th></tr>${Object.keys(days).sort().reverse().map(k=>{const d=days[k];return`<tr><td>${k}</td><td>${d.s}</td><td>${d.q}</td><td>${Math.round(d.ok/d.q*100)}%</td><td>${Math.round(d.sec/60)}</td><td>${(d.sec/d.q).toFixed(1)}</td></tr>`}).join('')||'<tr><td colspan=6>No data yet.</td></tr>'}</table></div>
-<h2>By topic</h2><div class="card scroll"><table><tr><th>Topic</th><th>Qs</th><th>Score</th><th>s/Q</th></tr>${Object.keys(tops).map(k=>{const t=tops[k];return`<tr><td>${k=='mix'?'Mixed':T[k].n}</td><td>${t.q}</td><td>${Math.round(t.ok/t.q*100)}%</td><td>${(t.sec/t.q).toFixed(1)}</td></tr>`}).join('')}</table></div>
+<h2>By topic</h2><div class="card scroll"><table><tr><th>Topic</th><th>Qs</th><th>Score</th><th>s/Q</th></tr>${Object.keys(tops).map(k=>{const t=tops[k];return`<tr><td>${k=='mix'?'Mixed':T[k]?T[k].n:'Daily challenge'}</td><td>${t.q}</td><td>${Math.round(t.ok/t.q*100)}%</td><td>${(t.sec/t.q).toFixed(1)}</td></tr>`}).join('')}</table></div>
 <h2>Mock tests</h2><div class="card scroll"><table><tr><th>Date</th><th>Exam</th><th>Score</th><th>Right/Wrong</th><th>Mins</th></tr>${Mo.slice(-15).reverse().map(x=>`<tr><td>${x.d}</td><td>${EX[x.ex].n}</td><td>${x.score}/${x.max}</td><td>${x.ok}/${x.wr}</td><td>${Math.round(x.secs/60)}</td></tr>`).join('')||'<tr><td colspan=5>No mock tests yet.</td></tr>'}</table></div>
+<h2>Typing passages</h2><div class="card"><textarea id="pa" placeholder="Paste a new passage (English, Hindi or Bengali)"></textarea><button class="btn alt" onclick="addPass()">Add passage</button>${cp().map((x,i)=>`<p class="sub">${x.slice(0,70)}… <a href="#" onclick="delPass(${i});return false">Delete</a></p>`).join('')}</div>
 <button class="btn" onclick="csv()">Export CSV</button><button class="btn alt" onclick="confirm('Delete all data on this device?')&&(localStorage.removeItem(K),dash())">Clear data</button>`}
 function csv(){const L=load(),h=['d','t','ty','tp','ex','n','ok','secs','wpm','acc','wr','score','max'],c=[h.join(',')].concat(L.map(x=>h.map(k=>x[k]??'').join(','))).join('\n');
 const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([c],{type:'text/csv'}));a.download='vedicprep-usage.csv';a.click()}
-document.title=BRAND.name+' – '+BRAND.tag;[['--ink',BRAND.c1],['--saf',BRAND.c2],['--mint',BRAND.c3]].forEach(([k,v])=>document.documentElement.style.setProperty(k,v));$('#ft').textContent=BRAND.credit;nav();home();
+document.title=BRAND.name+' – '+BRAND.tag;[['--ink',BRAND.c1],['--saf',BRAND.c2],['--mint',BRAND.c3]].forEach(([k,v])=>document.documentElement.style.setProperty(k,v));$('#ft').textContent=BRAND.credit;applyS();new MutationObserver(m=>m.forEach(x=>x.addedNodes.forEach(n=>tr(n.nodeType==3?n.parentNode:n)))).observe(document.body,{childList:true,subtree:true});nav();home();
 </script></body></html>
